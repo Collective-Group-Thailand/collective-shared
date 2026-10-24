@@ -65,7 +65,34 @@ describe('safeReturnTo', () => {
     ['/%2F%2Fevil', '/'],
     ['/javascript:alert(1)', '/'],
     [null, '/'],
+    ['/a/../dashboard', '/dashboard'],
+    ['/en/units?q=a%20b&page=2', '/en/units?q=a%20b&page=2'],
   ])('%s → %s', (input, expected) => expect(safeReturnTo(input)).toBe(expected));
+
+  // getproperty-web review H3: search params arrive decoded once, so both forms are refused.
+  const attacks = [
+    '/\t/evil.example/login',
+    '/%09/evil.example/login',
+    '/\n/evil.example',
+    '/%0a/evil.example',
+    '/%0D/evil.example',
+    '/\\evil.example',
+    '/%5cevil.example',
+    '\\/evil.example',
+    '//evil.example/path',
+    '/%2F/evil.example',
+    '/%252F%252Fevil.example',
+    '/ /evil.example',
+    '/%00/evil.example',
+    '/\u007f/evil.example',
+    'javascript:alert(1)',
+    '/x?next=%0d%0aSet-Cookie:a=b',
+    'dashboard',
+    '',
+    `/${'a'.repeat(5000)}`,
+  ];
+  it.each(attacks)('refuses %j', (attack) => expect(safeReturnTo(attack, 'FALLBACK')).toBe('FALLBACK'));
+  it('refuses non-strings', () => expect(safeReturnTo(3)).toBe('/'));
 });
 
 describe('Thai phone numbers', () => {

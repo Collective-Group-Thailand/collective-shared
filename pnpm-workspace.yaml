@@ -1,2 +1,5 @@
 packages:
   - 'packages/*'
+# Packages depend on each other by version range (not `workspace:`), so a product can install one from a folder
+# (`file:`) before the registry exists; inside this repository the range is still satisfied by the local package.
+linkWorkspacePackages: true

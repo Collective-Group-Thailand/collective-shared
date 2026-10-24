@@ -8,8 +8,8 @@
   },
   "scripts": {
     "build": "pnpm -r build",
-    "typecheck": "pnpm -r typecheck",
-    "test": "pnpm -r test",
+    "typecheck": "pnpm --filter @collective/web-kit build && pnpm -r typecheck",
+    "test": "pnpm --filter @collective/web-kit build && pnpm -r test",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "changeset": "changeset",

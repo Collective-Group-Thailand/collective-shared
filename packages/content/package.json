@@ -38,7 +38,7 @@
     "node": ">=22"
   },
   "dependencies": {
-    "@collective/web-kit": "workspace:^",
+    "@collective/web-kit": "^0.1.0",
     "zod": "^4.6.7"
   }
 }
