@@ -1,0 +1,31 @@
+import { defineConfig } from 'tsup';
+
+export default defineConfig({
+  entry: [
+    'src/index.ts',
+    'src/ai/index.ts',
+    'src/email/index.ts',
+    'src/etax/index.ts',
+    'src/http/index.ts',
+    'src/identity/index.ts',
+    'src/line/index.ts',
+    'src/ocr/index.ts',
+    'src/payments/gateways/index.ts',
+    'src/payments/qr/index.ts',
+    'src/pdf/index.ts',
+    'src/secrets/index.ts',
+    'src/sms/index.ts',
+    'src/storage/index.ts',
+    'src/teams/index.ts',
+    'src/virus-scan/index.ts',
+    'src/web-push/index.ts',
+    'src/webhooks/index.ts',
+  ],
+  format: ['esm', 'cjs'],
+  dts: true,
+  sourcemap: true,
+  clean: true,
+  splitting: false,
+  treeshake: true,
+  target: 'node22',
+});

@@ -1,0 +1,27 @@
+{
+  "name": "collective-shared",
+  "private": true,
+  "description": "Shared packages of Collective Group products (getproperty, getpack, getbuild) — D-275",
+  "packageManager": "pnpm@10.18.1",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "pnpm -r build",
+    "typecheck": "pnpm -r typecheck",
+    "test": "pnpm -r test",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "pnpm build && changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.29.7",
+    "@types/node": "^24.13.6",
+    "prettier": "^3.9.10",
+    "tsup": "^8.5.0",
+    "typescript": "6.0.3",
+    "vitest": "^5.0.5"
+  }
+}

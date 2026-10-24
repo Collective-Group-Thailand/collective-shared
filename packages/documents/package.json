@@ -1,0 +1,42 @@
+{
+  "name": "@collective/documents",
+  "version": "0.1.0",
+  "description": "Document storage rules and storage-based pricing shared by Collective products (D-275, D-276): object keys, upload checks, counted usage, quota levels, admission, notices, monthly GB-month charge.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./sql/*": "./sql/*",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "sql",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "restricted"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

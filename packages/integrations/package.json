@@ -1,0 +1,260 @@
+{
+  "name": "@collective/integrations",
+  "version": "0.1.0",
+  "description": "Provider ports, adapters and fakes shared by Collective Group products (D-275): identity, SMS, LINE, e-mail, storage, secrets, PDF, virus scan, web push, webhooks, payments, slip verification, e-Tax, OCR, AI gateway.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./ai": {
+      "import": {
+        "types": "./dist/ai/index.d.ts",
+        "default": "./dist/ai/index.js"
+      },
+      "require": {
+        "types": "./dist/ai/index.d.cts",
+        "default": "./dist/ai/index.cjs"
+      }
+    },
+    "./email": {
+      "import": {
+        "types": "./dist/email/index.d.ts",
+        "default": "./dist/email/index.js"
+      },
+      "require": {
+        "types": "./dist/email/index.d.cts",
+        "default": "./dist/email/index.cjs"
+      }
+    },
+    "./etax": {
+      "import": {
+        "types": "./dist/etax/index.d.ts",
+        "default": "./dist/etax/index.js"
+      },
+      "require": {
+        "types": "./dist/etax/index.d.cts",
+        "default": "./dist/etax/index.cjs"
+      }
+    },
+    "./http": {
+      "import": {
+        "types": "./dist/http/index.d.ts",
+        "default": "./dist/http/index.js"
+      },
+      "require": {
+        "types": "./dist/http/index.d.cts",
+        "default": "./dist/http/index.cjs"
+      }
+    },
+    "./identity": {
+      "import": {
+        "types": "./dist/identity/index.d.ts",
+        "default": "./dist/identity/index.js"
+      },
+      "require": {
+        "types": "./dist/identity/index.d.cts",
+        "default": "./dist/identity/index.cjs"
+      }
+    },
+    "./line": {
+      "import": {
+        "types": "./dist/line/index.d.ts",
+        "default": "./dist/line/index.js"
+      },
+      "require": {
+        "types": "./dist/line/index.d.cts",
+        "default": "./dist/line/index.cjs"
+      }
+    },
+    "./ocr": {
+      "import": {
+        "types": "./dist/ocr/index.d.ts",
+        "default": "./dist/ocr/index.js"
+      },
+      "require": {
+        "types": "./dist/ocr/index.d.cts",
+        "default": "./dist/ocr/index.cjs"
+      }
+    },
+    "./payments/gateways": {
+      "import": {
+        "types": "./dist/payments/gateways/index.d.ts",
+        "default": "./dist/payments/gateways/index.js"
+      },
+      "require": {
+        "types": "./dist/payments/gateways/index.d.cts",
+        "default": "./dist/payments/gateways/index.cjs"
+      }
+    },
+    "./payments/qr": {
+      "import": {
+        "types": "./dist/payments/qr/index.d.ts",
+        "default": "./dist/payments/qr/index.js"
+      },
+      "require": {
+        "types": "./dist/payments/qr/index.d.cts",
+        "default": "./dist/payments/qr/index.cjs"
+      }
+    },
+    "./pdf": {
+      "import": {
+        "types": "./dist/pdf/index.d.ts",
+        "default": "./dist/pdf/index.js"
+      },
+      "require": {
+        "types": "./dist/pdf/index.d.cts",
+        "default": "./dist/pdf/index.cjs"
+      }
+    },
+    "./secrets": {
+      "import": {
+        "types": "./dist/secrets/index.d.ts",
+        "default": "./dist/secrets/index.js"
+      },
+      "require": {
+        "types": "./dist/secrets/index.d.cts",
+        "default": "./dist/secrets/index.cjs"
+      }
+    },
+    "./sms": {
+      "import": {
+        "types": "./dist/sms/index.d.ts",
+        "default": "./dist/sms/index.js"
+      },
+      "require": {
+        "types": "./dist/sms/index.d.cts",
+        "default": "./dist/sms/index.cjs"
+      }
+    },
+    "./storage": {
+      "import": {
+        "types": "./dist/storage/index.d.ts",
+        "default": "./dist/storage/index.js"
+      },
+      "require": {
+        "types": "./dist/storage/index.d.cts",
+        "default": "./dist/storage/index.cjs"
+      }
+    },
+    "./teams": {
+      "import": {
+        "types": "./dist/teams/index.d.ts",
+        "default": "./dist/teams/index.js"
+      },
+      "require": {
+        "types": "./dist/teams/index.d.cts",
+        "default": "./dist/teams/index.cjs"
+      }
+    },
+    "./virus-scan": {
+      "import": {
+        "types": "./dist/virus-scan/index.d.ts",
+        "default": "./dist/virus-scan/index.js"
+      },
+      "require": {
+        "types": "./dist/virus-scan/index.d.cts",
+        "default": "./dist/virus-scan/index.cjs"
+      }
+    },
+    "./web-push": {
+      "import": {
+        "types": "./dist/web-push/index.d.ts",
+        "default": "./dist/web-push/index.js"
+      },
+      "require": {
+        "types": "./dist/web-push/index.d.cts",
+        "default": "./dist/web-push/index.cjs"
+      }
+    },
+    "./webhooks": {
+      "import": {
+        "types": "./dist/webhooks/index.d.ts",
+        "default": "./dist/webhooks/index.js"
+      },
+      "require": {
+        "types": "./dist/webhooks/index.d.cts",
+        "default": "./dist/webhooks/index.cjs"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "restricted"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "jose": "^6.2.12"
+  },
+  "peerDependencies": {
+    "@aws-sdk/client-s3": "^3.1138.0",
+    "@aws-sdk/s3-request-presigner": "^3.1138.0",
+    "@aws-sdk/client-secrets-manager": "^3.1138.0",
+    "@aws-sdk/client-sesv2": "^3.1138.0",
+    "puppeteer-core": ">=24",
+    "pdf-lib": "^1.17.1",
+    "web-push": "^3.6.7",
+    "sharp": ">=0.34"
+  },
+  "peerDependenciesMeta": {
+    "@aws-sdk/client-s3": {
+      "optional": true
+    },
+    "@aws-sdk/s3-request-presigner": {
+      "optional": true
+    },
+    "@aws-sdk/client-secrets-manager": {
+      "optional": true
+    },
+    "@aws-sdk/client-sesv2": {
+      "optional": true
+    },
+    "puppeteer-core": {
+      "optional": true
+    },
+    "pdf-lib": {
+      "optional": true
+    },
+    "web-push": {
+      "optional": true
+    },
+    "sharp": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@aws-sdk/client-s3": "^3.1152.0",
+    "@aws-sdk/s3-request-presigner": "^3.1152.0",
+    "@aws-sdk/client-secrets-manager": "^3.1152.0",
+    "@aws-sdk/client-sesv2": "^3.1152.0",
+    "puppeteer-core": "^24.43.1",
+    "pdf-lib": "^1.17.1",
+    "web-push": "^3.6.7",
+    "@types/web-push": "^3.6.4",
+    "sharp": "^0.35.5"
+  }
+}
