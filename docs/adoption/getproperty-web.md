@@ -2,7 +2,10 @@
 
 ```
 Adopt @collective/web-kit and @collective/content in getproperty-web (D-275, D-277).
-1. pnpm add both with link:../../collective-shared/packages/<name>.
+1. Install both with file: (not link: — Turbopack refuses files outside the repo and the standalone output must keep
+   server.js at its root): "@collective/web-kit": "file:../../collective-shared/packages/web-kit", same for content, plus
+   "pnpm": { "overrides": { "@collective/web-kit": "file:../../collective-shared/packages/web-kit" } }. Build
+   collective-shared first; re-run pnpm install in the web repo after changing a package.
 2. Replace src/features/owner/marketing/structured-data.ts builders with web-kit's (keep the file as a thin
    adapter if call sites need the old signatures); /llms.txt via renderLlmsTxt(); robots via robotsAllowRules().
 3. Guides: type them as Article from @collective/content (locale, published added); the guides test uses

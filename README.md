@@ -30,4 +30,7 @@ One pnpm monorepo, one version per package (changesets), distributed like `@coll
 pnpm add @collective/integrations@link:../../collective-shared/packages/integrations
 ```
 
+A Next.js web app installs with `file:` instead (Turbopack and the standalone output need the files inside the repo) and
+pins `@collective/web-kit` with a pnpm override — see getproperty-web's package.json. Build this repo first.
+
 Adoption guides per product: [`docs/adoption/`](docs/adoption). Where each file came from: [`PROVENANCE.md`](PROVENANCE.md).
